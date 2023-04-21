@@ -1,0 +1,9 @@
+{
+  "name": "Haskell",
+  "image": "haskell:9.4.4-buster",
+  "features": {
+      "ghcr.io/devcontainers/features/sshd:1": {
+          "version": "latest"
+      }
+  }
+}
