@@ -1,0 +1,29 @@
+cabal-version:      2.4
+name:               HaskellStudy
+version:            0.1.0.0
+author:             asufana
+maintainer:         asufanah@gmail.com
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:  MyLib
+    build-depends:    base ^>=4.15.1.0
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable HaskellStudy
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.15.1.0,
+        HaskellStudy
+    hs-source-dirs:   app
+    default-language: Haskell2010
+
+test-suite spec
+    type: exitcode-stdio-1.0
+    main-is: Spec.hs
+    hs-source-dirs: test
+    ghc-options: -Wall
+    build-depends: base, hspec >= 1.3
+    build-tool-depends: hspec-discover:hspec-discover
+    other-modules: MainSpec

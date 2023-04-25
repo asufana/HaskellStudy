@@ -1,9 +1,13 @@
 {
   "name": "Haskell",
-  "image": "haskell:9.4.4-buster",
-  "features": {
-      "ghcr.io/devcontainers/features/sshd:1": {
-          "version": "latest"
-      }
-  }
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "ubuntu-22.04"
+    }
+  },
+  "extensions": [
+    "haskell.haskell"
+  ],
+  "remoteUser": "vscode"
 }
